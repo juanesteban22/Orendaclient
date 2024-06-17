@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #Container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-left: 25%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .custom-file-upload {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .imgProducto {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FCCB55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color:#FCCB55;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    #Container {
+      width: 90%;
+    }
+  
+    .form-group {
+      margin-bottom: 10px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .form{
+      width: 78%;
+      margin-left: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #Container {
+      width: 95%;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      padding: 6px;
+      font-size: 14px;
+    }
+  
+    .custom-file-upload {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+  /* Centrar la alerta */
+.swal2-popup {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: Arial, sans-serif !important;
+}
+
+/* Hacer la alerta responsive */
+@media (max-width: 768px) {
+  .swal2-popup {
+    max-width: 90% !important;
+  }
+}

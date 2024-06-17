@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .sidebar {
+    position: absolute;
+    top: 26.6%;
+    height: 100%;
+    width: 200px; /* Ancho del menú lateral */
+    background-color:  #FCCB55;
+    border-left: 1px  #FCCB55; /* Borde izquierdo */
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado largo */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Borde inferior de cada elemento */
+  }
+  
+  .sidebar ul li:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último elemento */
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar ul li a:hover {
+    color:  #FCCB55;
+  }
+  

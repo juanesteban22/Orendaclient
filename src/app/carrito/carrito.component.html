@@ -1,0 +1,32 @@
+<!-- src/app/carrito/carrito.component.html -->
+<app-header></app-header>
+<div class="cart-container">
+  <h2>Carrito de Compras</h2>
+  <div *ngIf="products.length > 0; else carritoVacio" class="cart-items">
+    <div *ngFor="let product of products" class="cart-item">
+      <img [src]="product.imagen" alt="Imagen del Producto" class="product-image">
+      <div class="product-details">
+        <h3>{{ product.nombre }}</h3>
+        <p>{{ product.descripcion }}</p>
+        <p class="price">{{ product.precio | currency }}</p>
+        <div class="quantity-controls">
+          <button class="quantity-button" (click)="decrementQuantity(product)">-</button>
+          <span>{{ product.cantidad }}</span>
+          <button class="quantity-button" (click)="incrementQuantity(product)">+</button>
+        </div>
+        <p class="subtotal">Subtotal: {{ product.subtotal | currency }}</p>
+        <div class="button-group">
+          <button class="remove-button" (click)="removeFromCart(product)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <div class="total-price">
+      <h3>Total: {{ totalPrice | currency }}</h3>
+      <button class="pay-button" type="button" (click)="pay()">Pagar</button>
+    </div>
+  </div>
+  <ng-template #carritoVacio>
+    <span>No hay productos en el carrito</span>
+  </ng-template>
+</div>
+<app-footer></app-footer>

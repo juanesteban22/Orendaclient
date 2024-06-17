@@ -1,0 +1,167 @@
+/* Estilos generales */
+* {
+  font-style: oblique;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos del header */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 26px;
+  margin-top: 5px;
+}
+
+.nameUsers {
+  margin-left: 70%;
+  margin-top: -20px;
+}
+
+.nameUsers button {
+  margin-left: 20px;
+  border: none;
+  background-color: #FCCB55;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+img {
+  width: 100px;
+  display: flex;
+}
+
+.number {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  text-decoration: none;
+}
+
+.contenerdoCarrito {
+  margin-top: 0%;
+  margin-left: -0px;
+}
+
+/* Estilos del menú */
+nav {
+  background-color: #FCCB55;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 1%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 27%;
+}
+
+nav li {
+  margin-top: 15px;
+  margin-left: 30%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: none;
+  margin: 4px 0;
+}
+
+.animation-container {
+  width: 60%;
+  height: 50px;
+  position: relative;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+
+.animation-text {
+  position: absolute;
+  font-size: 20px;
+  animation: marquee 10s linear infinite;
+}
+
+@media (max-width: 800px) {
+ nav{
+  background-color: #FCCB55;
+ }
+
+ .nameUsers{
+  margin-left: 8px;
+  margin-top: 15px;
+}
+
+ img{
+  margin-left: 40%;
+ }
+
+  nav ul {
+    display: flex;
+    width: 100%;
+  }
+
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-right: -68px;
+  }
+
+  nav li {
+    margin: 10px 0;
+    margin-left: -10%;
+  }
+
+  nav a{
+    font-size: 16.5px;
+    margin-right: 70px;
+    
+  }
+  .contenerdoCarrito {
+    margin-top: -10%;
+    margin-left: -0px;
+  }
+}
+
+/* Animación del texto */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

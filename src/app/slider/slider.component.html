@@ -1,0 +1,19 @@
+<!-- src/app/slider/slider.component.html -->
+<div class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" [class.active]="0 === currentSlide">
+      <img src="../../assets/images/img1.jpg" alt="Slide 1">
+    </div>
+    <div class="carousel-item" [class.active]="1 === currentSlide">
+      <img src="../../assets/images/img7.jpg" alt="Slide 2">
+    </div>
+    <div class="carousel-item" [class.active]="2 === currentSlide">
+      <img src="../../assets/images/img4.jpg" alt="Slide 3">
+    </div>
+    <div class="carousel-item" [class.active]="3 === currentSlide">
+      <img src="../../assets/images/img9.jpg" alt="Slide 4">
+    </div>
+  </div>
+  <button class="carousel-control prev" (click)="prevSlide()">&#10094;</button>
+  <button class="carousel-control next" (click)="nextSlide()">&#10095;</button>
+</div>

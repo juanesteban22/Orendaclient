@@ -1,0 +1,100 @@
+/* src/app/carrito/carrito.component.css */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-container {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price, .subtotal {
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.remove-button, .pay-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pay-button {
+  background-color: green;
+}
+
+.total-price {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 800px) {
+  .cart-item {
+    flex-direction: row;
+  }
+
+  .product-image {
+    max-width: 150px;
+  }
+
+  .product-details {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .button-group {
+    justify-content: flex-end;
+  }
+}

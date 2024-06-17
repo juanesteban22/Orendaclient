@@ -1,0 +1,22 @@
+<app-header></app-header>
+<section>
+  <div class="product-container">
+    <div class="product-row" *ngFor="let row of productRows">
+      <div class="product-card" *ngFor="let product of row">
+        <img class="imgProducto" [src]="product.imagen" alt="{{ product.nombre }}">
+        <h3>{{ product.nombre }}</h3>
+        <p class="descripcion">{{ product.descripcion }}</p>
+        <p>Precio: {{ product.precio | currency }}</p>
+        <div class="button-group">
+          <button (click)="addToCart(product)" class="buy-button"><strong>Comprar</strong></button>
+          <button (click)="removeProduct(product)" class="delete-button">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="products.length === 0" class="no-products">
+    <p>No hay productos disponibles.</p>
+  </div>
+</section>
+<app-footer></app-footer>

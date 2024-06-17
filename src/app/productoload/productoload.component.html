@@ -1,0 +1,44 @@
+<section id="Container">
+  <div class="form">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="producto.nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Descripción:</label>
+        <textarea class="form-control" id="productDescription" name="productDescription" [(ngModel)]="producto.descripcion" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Precio:</label>
+        <input type="number" class="form-control" id="productPrice" name="productPrice" [(ngModel)]="producto.precio" required>
+      </div>
+      <div class="form-group">
+        <label for="categoria">Categoría:</label>
+        <select class="form-control" name="categoria" [(ngModel)]="producto.categoria" required>
+          <option value=""></option>
+          <option value="Plata">Plata</option>
+          <option value="Llamadores">Llamadores</option>
+          <option value="Brazaletes">Brazaletes</option>
+          <option value="Tobilleras">Tobilleras</option>
+          <option value="Amuletos">Amuletos</option>
+          <option value="Tejidos">Tejidos</option>
+          <option value="Talismanes">Talismanes</option>
+          <option value="Espacio">Espacio</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="container">
+          <label class="custom-file-upload">
+            <input class="inputImg" type="file" (change)="onFileSelected($event)" accept="image/*" required>
+            Selecciona img del producto
+          </label>
+          <img class="imgProducto" *ngIf="imagenSeleccionadaURL" [src]="imagenSeleccionadaURL" alt="Imagen seleccionada">
+        </div>
+        <button type="submit" id="bottone1"><strong>Cargar Producto</strong></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<app-footer></app-footer>
